@@ -1,0 +1,114 @@
+/* start home */
+
+.main_home{
+  height: 100vh;
+  background-image: linear-gradient(to top right, lightblue, blue , purple );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.nwclass{
+  width: 100% !important;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+
+img {
+  display: block;
+  width: 20%;
+  max-width: 480px;
+  margin: 2rem auto;
+}
+
+.home_img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+}
+.home_imge{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 80%;
+  border-radius: 50% !important; 
+
+}
+/* start login container */
+
+.login-main-container{
+  height: 100vh;
+  background-image: linear-gradient(to top right, lightblue, blue , purple );
+
+}
+.login-container {
+  background-color: white;
+  border-radius: 5px;
+width: 400px;
+flex-direction: column;
+}
+.login-details{
+  flex-direction: column;
+  background-color: white;
+  /* width: 390px; */
+}
+.login_button{
+  background-image: linear-gradient(to right, lightblue, blue, purple );
+
+}
+/* login page */
+.cen-div{
+  display: flex;
+  flex-direction: column;
+  justify-items: end !important;
+}
+.cens-div{
+  display: flex;
+  flex-direction:row;
+  justify-items:center !important;
+  align-items: center;
+  /* height: 50%;
+  width: 50%;
+  border-radius: 50%; */
+
+}
+.circle-div{
+  justify-items:center !important;
+  align-items: center;
+  width:30px !important;
+  height:30px !important;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+
+}
+
+/* start signup */
+.signup-circle-div{
+  justify-items:center !important;
+  align-items: center;
+  width:100px !important;
+  height:40px !important;
+  border-radius: 10px;
+  display: inline-block;
+  text-align: center;
+
+}
+.signin-container {
+  background-color: white;
+  border-radius: 5px;
+width: 400px;
+height: 500px;
+flex-direction: column;
+}
+
