@@ -3,6 +3,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import "../assets/css/img.css";
 import gsir4 from "../assets/images/gsir4.png";
+import bg from "../assets/images/bg.jpg";
 import Navbar from "../component/NavBar";
 
 const API_URL = "https://api.unsplash.com/search/photos";
@@ -63,7 +64,7 @@ function ImageSearch() {
   return (
     <>
     <Navbar/>
-      <div className="container-fluid " id="mm-m">
+      <div style={{backgroundImage:`url(${bg})`}} className="container-fluid global_bg  " id="mm-m">
         <div className="row flex-nowrap">
           <div className=" d-flex-column col-md-3 col-xl-2 col-sm-4 px-sm-4 px-0  bg-indigo sidebar-img-bg">
             <div className="d-flex container-fluid  flex-column align-items-start align-items-sm-start px-1 pt-1 text-white min-vh-100">
@@ -142,7 +143,7 @@ function ImageSearch() {
                     <i className="fs-6 bi-people">
                       <span
                         onClick={() => handleSelection("cities")}
-                        className="ms-1 d-none d-sm-inline text-start thover"
+                        className="ms-1  d-none d-sm-inline text-start thover"
                       >
                         City
                       </span>
@@ -311,8 +312,8 @@ function ImageSearch() {
             </div>
           </div>
           <div className="col py-3 justify-content-center align-item-center">
-            <h1 className="title">Image Search</h1>
-            <p className="d-flex justify-content-center align-item-center">
+            <h1 className="title text-indigo">Image Search</h1>
+            <p className="d-flex justify-content-center text-light align-item-center">
               <em>Explore & Discover more photos </em>
             </p>
             {errorMsg && <p className="error-msg">{errorMsg}</p>}
@@ -322,12 +323,12 @@ function ImageSearch() {
                   <Form.Control
                     type="search"
                     placeholder="Type something to search..."
-                    className="search-input border border-primary p-2 border-opacity-75 shadow-none"
+                    className="search-input  border-primary  m-0 p-2 border-opacity-90 rounded-pill-0 shadow-none"
                     ref={searchInput}
                   />
                 </Form>
               </div>
-              <Button onClick={handleSearch} className="btn btn-primary">
+              <Button onClick={handleSearch} className="btn btn-primary m-0 p-2 shadow-none rounded-pill-0">
                 check
               </Button>
             </div>

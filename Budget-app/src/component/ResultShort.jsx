@@ -6,7 +6,7 @@ const ResultShort = () => {
     const [inputValue, setInputValue] = useState("");
   return (
 
-    <div className="container">
+    <div className="container ">
     <InputShortner setInputValue={setInputValue}/>
     < LinkResult inputValue={inputValue} />
     </div>

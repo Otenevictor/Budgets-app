@@ -5,8 +5,7 @@ const Navhome = () => {
     <nav className="container-fluid navbar nwclass navbar-expand-lg bg-body-tertiary p-4">
       <div className="container-fluid">
         <Link className="navbar-brand ms-5" to="/">
-          ASOV-1
-        </Link>
+        ASOV-TEC        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -18,7 +17,8 @@ const Navhome = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse ms-5" id="navbarNav">
+        <div className="collapse  navbar-collapse ms-5" id="navbarNav">
+          <div className="ms-auto">
           <ul className="navbar-nav ms-5">
             <li className="nav-item">
               <Link className="nav-link active" aria-current="page" to="/">
@@ -32,10 +32,11 @@ const Navhome = () => {
               </Link>
             </li>
           </ul>
+          </div>
           <ul className="navbar-nav  ms-5 ml-5">
             <li className="nav-item ">
               <Link
-                className="nav-link active ms-5 text-dark "
+                className="nav-link active ms-5 text-dark nav-link text-dark px-3 py-2 text-white bg-primary hover:bg-white hover:text-dark rounded-pill "
                 aria-current="page"
                 to="/login"
               >

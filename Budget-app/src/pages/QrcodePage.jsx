@@ -29,7 +29,7 @@ const QrcodePage = () => {
     <>
     <Navbar/>
 
-    <div className="d-flex justify-content-center align-item-center">
+    <div className="d-flex   justify-content-center align-item-center " >
       <div className="home-qr m-3 flex-column  d-flex ">
         <h1 className="text-primary m-3 "> QR Code Generator </h1>
         <div className="qr_input d-flex flex-column  justify-content-center align-item-center">

@@ -1,5 +1,8 @@
+/* eslint-disable react-refresh/only-export-components */
 import { initializeApp } from "firebase/app";
-import {getAuth} from 'firebase/auth'
+import { getAuth, signInWithRedirect, GoogleAuthProvider, getRedirectResult, onAuthStateChanged } from "firebase/auth";
+
+// import {getAuth} from 'firebase/auth'
 
 const firebaseConfig = {
   apiKey: "AIzaSyCnEVKYEDkxppu4dYzS_mrcC_TcTs8Dxj4",
@@ -12,4 +15,8 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const database=getAuth(app)
+const provider = new GoogleAuthProvider();
+const database=getAuth()
+const auth=getAuth()
+
+export { app, provider, auth, database, signInWithRedirect, GoogleAuthProvider, getRedirectResult, onAuthStateChanged };

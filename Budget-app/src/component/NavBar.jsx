@@ -4,7 +4,6 @@ import { database } from "../firebaseConfig";
 import { useNavigate } from "react-router-dom";
 // import gsir4 from "../assets/images/gsir4.png";
 
-
 const Navbar = () => {
   const history = useNavigate();
   const handleClick = () => {
@@ -17,7 +16,7 @@ const Navbar = () => {
   return (
     <nav className="container-fluid navbar nwclass navbar-expand-lg bg-body-tertiary p-4">
       <div className="container-fluid">
-        <Link className="navbar-brand ms-5" to="/dashboard">
+        <Link className="navbar-brand text-primary ms-5" to="/dashboard">
           ASOV-TEC DASHBOARD
         </Link>
         <button
@@ -31,12 +30,14 @@ const Navbar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse ms-5" id="navbarNav">
-          <ul className="navbar-nav">
+        <div className="collapse navbar-collapse " id="navbarNav">
+          <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/dashboard">
-                
-              </Link>
+              <Link
+                className="nav-link active"
+                aria-current="page"
+                to="/dashboard"
+              ></Link>
             </li>
             <li className="nav-item">
               <Link
@@ -70,7 +71,7 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
-          <ul className="navbar-nav  ms-5 ml-5">
+          <ul className="navbar-nav  ms-auto  ml-5">
             {/* <li className="nav-item ">
               <Link
                 className="nav-link active ms-5 text-dark "
@@ -96,7 +97,7 @@ const Navbar = () => {
                 Signup
               </Link>
             </li> */}
-            <li className="nav-item ms-5 ">
+            <li className="nav-item ms-auto">
               <Link
                 onClick={handleClick}
                 className="nav-link text-dark px-3 py-2 text-white bg-primary hover:bg-white hover:text-dark rounded-pill"
@@ -104,7 +105,7 @@ const Navbar = () => {
                 signout
               </Link>
             </li>
-             {/* <div className="dropdown ">
+            {/* <div className="dropdown ">
                 <a
                   href="#"
                   className="d-flex align-items-center text-dark text-decoration-none dropdown-toggle"

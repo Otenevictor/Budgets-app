@@ -48,7 +48,7 @@ const LinkResult = ({ inputValue }) => {
     return (
       <>
       {shortenLink && (
-         <div className="text-dark bg-danger h3">
+         <div className="text-dark bg-danger  h3">
          <p className="border-danger">{shortenLink}</p>
          <CopyToClipboard text={shortenLink} onCopy={() => setCopied(true)}>
            <button className={copied ? "copied" : ""}>copy to clipboard</button>
