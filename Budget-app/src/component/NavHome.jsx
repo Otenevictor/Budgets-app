@@ -1,23 +1,56 @@
 import { Link } from "react-router-dom";
+import  { useState } from "react";
+import { Navbar } from "react-bootstrap";
+import { FaBars, FaTimes } from "react-icons/fa"; // Import icons from a library like react-icons
+
+// const CustomNavbar = () => {
+//   const [isNavOpen, setIsNavOpen] = useState(false);
+
+//   const handleToggle = () => {
+//     setIsNavOpen(!isNavOpen);
+//   };
+
+//   return (
+//     <Navbar bg="dark" expand="lg">
+//       <Navbar.Brand href="#home">Your Logo</Navbar.Brand>
+      
+//       {/* Use your custom toggle button */}
+//       <button className="custom-toggler" onClick={handleToggle}>
+//         {isNavOpen ? <FaTimes /> : <FaBars />}
+//       </button>
+
+//       <Navbar.Collapse id="basic-navbar-nav" className={isNavOpen ? "show" : ""}>
+//         <Nav className="ml-auto">
+//           <Nav.Link href="#home">Home</Nav.Link>
+//           <Nav.Link href="#about">About</Nav.Link>
+//           <Nav.Link href="#contact">Contact</Nav.Link>
+//         </Nav>
+//       </Navbar.Collapse>
+//     </Navbar>
+//   );
+// };
+
+
+
 
 const Navhome = () => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsNavOpen(!isNavOpen);
+  };
   return (
+    <>   
+     {/* <CustomNavbar/> */}
     <nav className="container-fluid navbar nwclass navbar-expand-lg bg-body-tertiary p-4">
       <div className="container-fluid">
         <Link className="navbar-brand ms-5" to="/">
         ASOV-TEC        </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse  navbar-collapse ms-5" id="navbarNav">
+        <button className="custom-toggler d-lg-none" onClick={handleToggle}>
+        {isNavOpen ? <FaTimes /> : <FaBars />}
+      </button>
+
+        <Navbar.Collapse  className= {isNavOpen ? "show" : ""}  id="basic-navbar-nav" >
           <div className="ms-auto">
           <ul className="navbar-nav ms-5">
             <li className="nav-item">
@@ -53,9 +86,11 @@ const Navhome = () => {
             </li>
           
           </ul>
-        </div>
+        </Navbar.Collapse >
       </div>
     </nav>
+    </>
+
   );
 };
 

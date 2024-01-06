@@ -2,9 +2,17 @@ import { Link } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { database } from "../firebaseConfig";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { Navbar } from "react-bootstrap";
+import { FaBars, FaTimes } from "react-icons/fa"; // Import icons from a library like react-icons
 // import gsir4 from "../assets/images/gsir4.png";
 
-const Navbar = () => {
+const NavbarDashboard = () => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsNavOpen(!isNavOpen);
+  };
   const history = useNavigate();
   const handleClick = () => {
     signOut(database).then((val) => {
@@ -19,18 +27,13 @@ const Navbar = () => {
         <Link className="navbar-brand text-primary ms-5" to="/dashboard">
           ASOV-TEC DASHBOARD
         </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
+        <button className="custom-toggler d-lg-none" onClick={handleToggle}>
+          {isNavOpen ? <FaTimes /> : <FaBars />}
         </button>
-        <div className="collapse navbar-collapse " id="navbarNav">
+        <Navbar.Collapse
+          className={isNavOpen ? "show" : ""}
+          id="basic-navbar-nav"
+        >
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <Link
@@ -149,10 +152,10 @@ const Navbar = () => {
                 </ul>
               </div> */}
           </ul>
-        </div>
+        </Navbar.Collapse>
       </div>
     </nav>
   );
 };
 
-export default Navbar;
+export default NavbarDashboard;

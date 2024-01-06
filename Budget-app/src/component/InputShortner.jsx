@@ -9,10 +9,10 @@ const InputShortner = ({ setInputValue }) => {
   };
   return (
     <>
-      <div className=" text-center d-flex  justify-content-center align-item-center ">
-        <div className="text-center h1 p-3 justify-content-center">
+      <div className=" text-center d-flex  flex-column justify-content-center align-item-center ">
+        <h1 className="text-center h1 p-3 justify-content-center">
           URL <span className="text-danger">Shortner</span>
-        </div>
+        </h1>
         <div className="m-3 p-2 d-flex justify-content-center align-item-center">
           <input
             type="text"

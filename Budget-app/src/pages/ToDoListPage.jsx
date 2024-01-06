@@ -63,6 +63,7 @@ const TodoList = () => {
     setItems(updatedItems);
     setEditIndex(null);
     setEditInputValue("");
+    alert("task edited");
   };
 
   const handleClick = () => {
@@ -70,6 +71,8 @@ const TodoList = () => {
       setItems([...items, inputValue]);
       setInputValue("");
       console.log(items);
+    } else {
+      alert("input can't be empty");
     }
   };
 
@@ -83,7 +86,7 @@ const TodoList = () => {
   // };
 
   const getColorForIndex = (index) => {
-    const colors = ["red", "blue", "purple", "yellow", "green"];
+    const colors = ["red", "blue", "purple", "black", "green", "orange"];
     return colors[index % colors.length];
     // run true all colour for each items
   };
@@ -91,41 +94,69 @@ const TodoList = () => {
     <>
       <Navbar />
 
-      <div className="d-flex justify-content-center align-item-center">
-        <h1>Todo List</h1>
-        <input
-          className="p-1  border-primary px-2"
-          type="text"
-          placeholder="add a list"
-          value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
-        />
-        <button className="btn bg-primary text-white" onClick={handleClick}>
-          Add
-        </button>
+      <div className=" container-fluid mt-5 d-flex flex-column justify-content-center align-item-center">
+        <h1 className="text-center">Todo List</h1>
+        <div className=" container d-flex  justify-content-center align-item-center">
+          <div className="">
+            <input
+              className="p-2  border-primary remove_blue_boder todo_add_button"
+              type="text"
+              placeholder="add a task"
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+            />
+          </div>
+          <button className="btn bg-primary todo_add_button rounded-start-0 text-white" onClick={handleClick}>
+            Add
+          </button>
+        </div>
         {/* <p>{items}</p> */}
-        <ul>
+        <ul className="list-group m-4 bg-dark">
           {items.map((items, index) => (
-            <li key={index} className={items.completed ? 'completed' : ''} style={{ color: getColorForIndex(index) }}>
+            <li
+              key={index}
+              className={`list-group-item ${
+                items.completed ? "completed" : ""
+              }`}
+              style={{ color: getColorForIndex(index) }}
+            >
               {index === editIndex ? (
                 <>
                   <input
+                    className="form-control " style={{ color: getColorForIndex(index) }}
                     type="text"
                     value={editInputValue}
                     onChange={(e) => setEditInputValue(e.target.value)}
                   />
-                  <button onClick={() => handleSaveEdit(index)}>
+                  <div className="d-flex flex-row  m-2 justify-content-end">
+                  <button
+                    className="btn btn-success d-flex flex-row  m-2 justify-content-end"
+                    onClick={() => handleSaveEdit(index)}
+                  >
                     save edit
                   </button>
+                  </div>
                 </>
               ) : (
                 <>
-                {/* {items} */}
+                  {/* {items} */}
                   {/* <span onClick={() => handleToggleComplete(index)} style={{ textDecoration : items.completed ? 'line-through' : 'none'}}> */}
-                    {items}
+                  {items}
                   {/* </span> */}
-                  <button onClick={() => handleEditClick(index)}>Edit</button>
-                  <button onClick={() => handleDelete(index)}>delete</button>
+                  <span className="d-flex flex-row justify-content-end ">
+                    <button
+                      className="btn btn-warning mx-2"
+                      onClick={() => handleEditClick(index)}
+                    >
+                      Edit
+                    </button>
+                    <button
+                      className="btn btn-danger"
+                      onClick={() => handleDelete(index)}
+                    >
+                      delete
+                    </button>
+                  </span>
                 </>
               )}
             </li>

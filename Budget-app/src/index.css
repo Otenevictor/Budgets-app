@@ -4,6 +4,35 @@
   padding: 0px;
 
 }
+h1 {
+  font-size: 72px; /* Adjust font size as needed */
+  background: linear-gradient(to right, #f0f, #0ff); /* Choose your gradient colors */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.custom-toggler {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: blue;
+}
+.remove_blue_boder{
+  outline: none;
+  box-shadow: blue;
+
+}
+.todo_add_button:hover{
+  cursor:pointer;
+  background: green !important;
+  border: 2px solid green !important;
+  color: white;
+}
+/* Optionally add styles for the open/close state */
+.custom-toggler.open {
+  color: red !important;
+}
+
 .main-home1{
   display:flex;
   flex-direction:column;

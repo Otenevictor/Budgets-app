@@ -136,7 +136,7 @@
 import { useState } from "react";
 import { database } from "../firebaseConfig";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [login, setLogin] = useState(false);
@@ -243,9 +243,9 @@ const Login = () => {
               Or Sign Up Using
             </p>
             <span className="justify-content-center align-item-center">
-              <a href="/signup" className="text-primary link-underline-light">
-                SIGN UP
-              </a>
+              <Link to="/" className="text-primary link-underline-light">
+                Back
+              </Link>
             </span>
           </div>
         </div>
