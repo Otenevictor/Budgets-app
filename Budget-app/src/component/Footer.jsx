@@ -32,7 +32,7 @@ export const Footer = () => {
               </ul>
             </div>
             <div className="col-4">
-            <h5> Socail Links</h5>
+            <h5> Social Links</h5>
               <ul>
                 <li>
                   <Link to="/">facebook</Link>
@@ -54,7 +54,7 @@ export const Footer = () => {
           <div className="footer-bottom-wrapper">
             <div className="footer-copyright d-flex align-item-center justify-content-center">
               <small>
-                Copyrights © 2024 Sparkfresh concept. Privacy Policy / Making
+                Copyrights © 2024 Asov-tech concept. Privacy Policy / Making
                 Guide
               </small>
             </div>

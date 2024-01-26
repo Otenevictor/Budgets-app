@@ -35,14 +35,14 @@ const QrcodePage = () => {
         <div className="qr_input d-flex flex-column  justify-content-center align-item-center">
           <div className=" d-flex  justify-content-center align-item-center">
             <input
-              className="p-1  border-primary px-2"
+              className="p-2  border-primary remove_blue_boder todo_add_button"
               type="text"
               placeholder="e.g. https://google.com"
               value={url}
               onChange={(evt) => setUrl(evt.target.value)}
             />
             <button
-              className="btn bg-primary text-white"
+              className="btn  bg-primary todo_add_button rounded-start-0 text-white"
               onClick={GenerateQRCode}
             >
               {" "}

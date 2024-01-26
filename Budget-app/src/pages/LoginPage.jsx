@@ -14,7 +14,7 @@
 //     e.preventDefault();
 //     const email = e.target.email.value;
 //     const password = e.target.password.value;
-//     if (type == "signin") {
+//     if (type == "signup") {
 //       createUserWithEmailAndPassword(database, email, password)
 //         .then((data) => {
 //           console.log(data, "authData");
@@ -49,7 +49,7 @@
 //             <h1 className="fs-3 d-flex justify-content-center align-item-center">
 //               Login
 //             </h1>
-//             <form onSubmit={(e) => handleSubmit(e, login ? "login" : "signin")}>
+//             <form onSubmit={(e) => handleSubmit(e, login ? "login" : "signup")}>
 //               <div>
 //                 <label>Username</label>
 //                 <div className="input-group flex-nowrap border-0 border-bottom">
@@ -98,7 +98,7 @@
 //                   className="btn btn-primary login_button rounded-pill p-1 col-12"
 //                   type="submit"
 //                 >
-//                   {login ? "login" : "signin"}
+//                   {login ? "login" : "signup"}
 //                 </button>
 //               </div>
 //             </form>
@@ -143,17 +143,19 @@ const Login = () => {
   const history = useNavigate();
 
   const handleSubmit = async (e, type) => {
+    
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
 
     try {
-      if (type === "signin") {
-        await createUserWithEmailAndPassword(database, email, password);
-        alert("Access to dashboard activated");
-      } else if (type === "login") {
+      
+      if (type === "signup") {
         await signInWithEmailAndPassword(database, email, password);
         alert("Login successful");
+      } else if (type === "login") {
+        await createUserWithEmailAndPassword(database, email, password);
+        alert("Access to dashboard activated");
       } else {
         throw new Error("Invalid action type");
       }
@@ -161,7 +163,10 @@ const Login = () => {
       history("/dashboard");
     } catch (error) {
       if (error.code) {
+        console.log("seems like your internet connection is offline");
+        alert("seems like your internet connection is offline");
         alert(error.code);
+
       } else {
         alert("An unexpected error occurred");
       }
@@ -175,9 +180,9 @@ const Login = () => {
       <div className="d-flex m-4 p-4 login-container">
         <div className="login-details d-flex m-1">
           <h1 className="fs-3 d-flex justify-content-center align-item-center">
-            Login
+          {login ? "SignUp" : "Login"}
           </h1>
-          <form onSubmit={(e) => handleSubmit(e, login ? "login" : "signin")}>
+          <form onSubmit={(e) => handleSubmit(e, login ? "login" : "signup")}>
             <div>
               <label>Email</label>
               <div className="input-group flex-nowrap border-0 border-bottom">
@@ -224,7 +229,7 @@ const Login = () => {
                 className="btn btn-primary login_button rounded-pill p-1 col-12"
                 type="submit"
               >
-                {login ? "Login" : "Sign Up"}
+                {login ? "SignUp" : "Login"}
               </button>
             </div>
           </form>

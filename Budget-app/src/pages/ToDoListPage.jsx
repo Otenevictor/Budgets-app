@@ -123,7 +123,7 @@ const TodoList = () => {
               {index === editIndex ? (
                 <>
                   <input
-                    className="form-control " style={{ color: getColorForIndex(index) }}
+                    className="form-control remove_blue_boder " style={{ color: getColorForIndex(index) }}
                     type="text"
                     value={editInputValue}
                     onChange={(e) => setEditInputValue(e.target.value)}

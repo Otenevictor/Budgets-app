@@ -8,6 +8,7 @@ import Login from '../pages/LoginPage';
 import SignIn from '../pages/SignupPage';
 import NotFound from '../pages/404Page';
 import Dashboard from '../pages/Dashboard'
+import Payout from '../pages/Payouts'
 
 function RouteApp() {
   return (
@@ -23,6 +24,8 @@ function RouteApp() {
       <Route path="/todolist" element={<TodoList/>} />
       <Route path="/login" element={<Login/>} />
       <Route path="/signup" element={<SignIn/>} />
+      <Route path="/payout" element={<Payout/>} />
+
     </Routes>
   </>
   )

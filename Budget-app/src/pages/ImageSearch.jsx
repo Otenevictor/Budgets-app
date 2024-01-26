@@ -3,8 +3,10 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import "../assets/css/img.css";
 import gsir4 from "../assets/images/gsir4.png";
-import bg from "../assets/images/bg.jpg";
+// import bg from "../assets/images/bg.jpg";
 import Navbar from "../component/NavBar";
+
+// style={{backgroundImage:`url(${bg})`}} 
 
 const API_URL = "https://api.unsplash.com/search/photos";
 const IMAGES_PER_PAGE = 16;
@@ -64,7 +66,7 @@ function ImageSearch() {
   return (
     <>
     <Navbar/>
-      <div style={{backgroundImage:`url(${bg})`}} className="container-fluid global_bg  " id="mm-m">
+      <div className="container-fluid global_bg  " id="mm-m">
         <div className="row flex-nowrap">
           <div className=" d-flex-column col-md-3 col-xl-2 col-sm-4 px-sm-4 px-0  bg-indigo sidebar-img-bg">
             <div className="d-flex container-fluid  flex-column align-items-start align-items-sm-start px-1 pt-1 text-white min-vh-100">
@@ -319,16 +321,16 @@ function ImageSearch() {
             {errorMsg && <p className="error-msg">{errorMsg}</p>}
             <div className="d-flex search-section">
               <div className="search-section">
-                <Form>
+                {/* <Form> */}
                   <Form.Control
                     type="search"
                     placeholder="Type something to search..."
-                    className="search-input  border-primary  m-0 p-2 border-opacity-90 rounded-pill-0 shadow-none"
+                    className=" p-3  border-primary remove_blue_boder todo_add_button"
                     ref={searchInput}
                   />
-                </Form>
+                {/* </Form> */}
               </div>
-              <Button onClick={handleSearch} className="btn btn-primary m-0 p-2 shadow-none rounded-pill-0">
+              <Button onClick={handleSearch} className="btn p-3  bg-primary todo_add_button rounded-start-0 text-white">
                 check
               </Button>
             </div>
