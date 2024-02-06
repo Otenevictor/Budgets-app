@@ -7,16 +7,13 @@ import HomeMain from '../component/HomeMain';
 
 const Dashboard = () => {
   return (<>
-  <Navbar/>
-    {/* <div className='main_home '>
-        <h1 className='fs-1 text-light'> Hi Welcome <em className='text-danger'>Asov :(</em></h1>
-        <div className='home_img'>
-    <img className='home_imge' src={gsir4} />
-    </div>
-    </div> */}
+    <Navbar/>
+  <div className="main_home">
+   <h1 className='d-flex align-item-center justify-content-center fs-3 '>Welcome to your Dashboard</h1>
+   </div>
     <HomeMain/>
     
-
+   
    
     </>
   )

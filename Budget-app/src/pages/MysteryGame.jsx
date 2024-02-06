@@ -46,14 +46,14 @@ function MysteryBox() {
   };
 
   return (
-    <div>
+    <div className="d-flex flex-column gamebox_height p-3 bg-warning justify-content-center align-item-center">
       <h1>Mystery Box</h1>
       <p>
         Im a number between 20 and 100. can you solve the mystery and guess what i am?
       </p>
-      <p>{clues[clueIndex]}</p>
+      <p className="bg-light d-flex text-danger justify-content-center align-item-center  p-2" >{clues[clueIndex]}</p>
       {clueIndex !== clues.length - 1 && (
-        <button onClick={showNextClue}>show next clue</button>
+        <button className="bg-success text-light  p-2" onClick={showNextClue}>show next clue</button>
       )}
       <form onSubmit={handleSubmit}>
         <input
@@ -61,7 +61,7 @@ function MysteryBox() {
           value={guess}
           onChange={(event) => setGuess(event.target.value)}
         />
-        <button type="submit">Guess</button>
+        <button className="bg-success p-2" type="submit">Guess</button>
       </form>
       <p>{message}</p>
     </div>

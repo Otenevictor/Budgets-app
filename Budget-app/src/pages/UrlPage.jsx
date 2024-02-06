@@ -1,7 +1,7 @@
 // import React from 'react'
 import Navbar from '../component/NavBar'
 import ResultShort from '../component/ResultShort'
-import GuessingGame from './Games'
+// import GuessingGame from './Games'
 
 const UrlPage = () => {
   return (
@@ -9,7 +9,7 @@ const UrlPage = () => {
       <Navbar/>
 
     <ResultShort/>
-    <GuessingGame/>
+    {/* <GuessingGame/> */}
     </>
   )
 }

@@ -9,6 +9,14 @@
   width: 270px;
   border-radius: 10px;
 }
+.gamebox_height {
+  height: 80% !important;
+  width: 60%;
+}
+.gamebox_height2 {
+  height: 340px !important;
+  /* width: 40%; */
+}
 .grey_color_payout{
   color: aliceblue;
 }
