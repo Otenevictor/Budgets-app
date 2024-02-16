@@ -101,14 +101,14 @@ const Navhome = () => {
                   Login
                 </Link>
               </li>
-              <li className="nav-item ms-5 ">
+              {/* <li className="nav-item ms-5 ">
                 <Link
                   className="nav-link text-dark px-3 py-2 text-white bg-primary hover:bg-white hover:text-dark rounded-pill"
                   to="/signup"
                 >
                   Signup
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </Navbar.Collapse>
         </div>
