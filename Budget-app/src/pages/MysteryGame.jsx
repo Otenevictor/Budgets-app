@@ -40,6 +40,7 @@ function MysteryBox() {
       );
     } else {
       setMessage("Try again!");
+
     }
     // clear the input field after each guess
     setGuess("");

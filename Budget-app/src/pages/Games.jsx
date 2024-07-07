@@ -14,6 +14,8 @@ function GuessingGame() {
   const handleGuessSubmit = (event) => {
     event.preventDefault();
 
+
+
     // validate the guess
 
     const parsedGuess = parseInt(guess, 10);
@@ -30,6 +32,7 @@ function GuessingGame() {
       setMessage("your guess is too high. Try again.");
     }
     setGuess("");
+
   };
 
   return (
@@ -48,6 +51,7 @@ function GuessingGame() {
             <button className="bg-success p-2" type="submit">Guess</button>
           </form>
           <p>{message}</p>
+
         </div>
 
         <div className="d-flex p-3 bg-warning justify-content-center align-item-center">

@@ -427,16 +427,18 @@ const Login = () => {
           )}
 
           {/* Existing JSX for social media sign up and back link */}
-          <div className="d-flex flex-column mt-2 mb-2 justify-content-center align-item-center cens-div">
-            <p className="justify-content-center align-item-center">
-              Or {isLogin ? "Sign Up" : "Login"} Using
-            </p>{" "}
-            <button
-              className="btn btn-primary login_button rounded-pill p-1 col-12"
+          <div className="d-flex flex-column mt-2 mb-0 justify-content-center align-item-center cens-div">
+            <p className="mb-0 justify-content-center align-item-center">
+              Or 
+            </p>
+            <p
+              className=" mt-0 col-12 d-flex mouse_pointer justify-content-end align-item-end"
               onClick={() => setIsLogin(!isLogin)}
             >
+               {/* {isLogin ? "Register" : "Register"} */}
                {isLogin ? "Register" : "Login"}
-            </button>
+
+            </p>
             <div className="d-flex justify-content-center align-item-center cens-div">
               <div className="m-2 circle-div bg-primary text-light">F</div>
               <div className="m-2 circle-div bg-secondary text-light">T</div>

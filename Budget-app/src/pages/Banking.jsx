@@ -28,8 +28,8 @@ import { AssetTranfer } from "./Bankings/AssetTranfer";
 //   }
 function Banking() {
   const [total, setTotal] = useState(89);
-  const [depositAmount, setDepositAmount] = useState("");
-  const [creditAmount, setCreditAmount] = useState("");
+  const [depositAmount, setDepositAmount] = useState();
+  const [creditAmount, setCreditAmount] = useState();
 
   const handleDeposit = () => {
     if (depositAmount >= 0) {
@@ -37,7 +37,8 @@ function Banking() {
       // reset deposit amount input after processing
       alert(`you are reciving $${depositAmount} to your initail bal $${total}`);
       setDepositAmount("");
-    } else {
+    }
+    else {
       alert("error amount less than zero");
     }
   };
@@ -49,6 +50,7 @@ function Banking() {
       setCreditAmount("");
     } else {
       alert("insufficient fund");
+      setCreditAmount("");
     }
   };
 
