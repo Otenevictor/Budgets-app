@@ -8,7 +8,7 @@ import Login from '../pages/LoginPage';
 import SignIn from '../pages/SignupPage';
 import NotFound from '../pages/404Page';
 import Dashboard from '../pages/Dashboard'
-import Payout from '../pages/Payouts'
+// import Payout from '../pages/Payouts'
 import GuessingGame from '../pages/Games';
 import Banking from '../pages/Banking';
 
@@ -26,7 +26,7 @@ function RouteApp() {
       <Route path="/todolist" element={<TodoList/>} />
       <Route path="/login" element={<Login/>} />
       <Route path="/signup" element={<SignIn/>} />
-      <Route path="/payout" element={<Payout/>} />
+      {/* <Route path="/payout" element={<Payout/>} /> */}
       <Route path="/games" element={<GuessingGame/>} />
       <Route path="/banking" element={<Banking/>} />
 

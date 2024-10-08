@@ -83,12 +83,12 @@ const Navhome = () => {
                     FAQs
                   </Link>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <Link className="nav-link text-dark " to="/payout">
                     {" "}
                     Payout
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
             <ul className="navbar-nav  ms-5 ml-5">
