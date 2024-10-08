@@ -1,4 +1,4 @@
-import PriceTag from "../component/payoutCom/priceTag";
+// import PriceTag from "../component/payoutCom/priceTag";
 import TableId from "../component/payoutCom/TableId";
 import NavHome from "../component/NavHome";
 import SideNav from "../component/SideNav";
@@ -46,7 +46,7 @@ function Payout() {
             </div>
 
             <div className="">
-              <PriceTag />
+              {/* <PriceTag /> */}
             </div>
             <h4 className="mb-4 mt-4 text-light">Tansactions | This Month</h4>
             <div className="mb-4 ">
